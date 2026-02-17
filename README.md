@@ -4,9 +4,9 @@ So in this project we have tried to reprocude the cultureadapt pipeline as propo
 
 We have also tried to implement a similar thing. The modularity of the pipeline allows us to easily swap the elements while keeping the ultimate outcome or original intent the same. So firstly instead of the GPT4V APIs we have used the Recognize Anything Model(RAM) which is open source and very good at identifying things.For the code you can check [test_ram.py](cultureadapt_ram/test_ram.py) or [USING_RAM.ipynb](Notebooks/USING_RAM.ipynb).The outcome for [img4.png](cultureadapt_ram/img4.png) for example are "bowl . broccoli . broth . fill . food . meat . noodle . onion . parsley . pork . soup . stew . vegetable . white .". These will be used in the next step. 
 
-For the bounding boxes we have used GroudingDINO only. The prompt for this step and the impainting process are stored in the edit_config.json file. The output for this stage will be something like this:
+For the bounding boxes we have used GroudingDINO only. The prompt for this step and the inpainting process are stored in [edit_config.json](change_pic/edit_config.json).The output for this stage will be something like this:
 
 The next stage is to create the masks for the parts to be replaced by the impainting model. The impainting model that we have used for now is stable-diffusion-inpainting.The output for img4 will look something like:
 
 
-The code for the groundingDINO stage and the mask creation and impainting model are in the test_ram.py.
+The code for the groundingDINO stage and the mask creation and impainting model are in the [edit.py](change_pic/edit.py).
