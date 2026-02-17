@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+hf_cache/
+.cache/
+results/
+outputs/
+checkpoints/
+*.pth
+*.pt
+*.safetensors
